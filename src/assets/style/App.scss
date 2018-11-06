@@ -1,0 +1,18 @@
+@import "./common";
+
+#nav {
+  padding: 1em 3em;
+  .main-nav-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-basis: 100%;
+    .add-button {
+      justify-self: flex-end;
+    }
+  }
+}
+  .myButton {
+    text-transform: uppercase;
+  }
+

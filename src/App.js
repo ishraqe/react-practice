@@ -1,15 +1,14 @@
 import React, { Component } from "react";
-import { Button } from "reactstrap";
-import "./App.scss";
-
+import "./assets/style/App.scss";
+import Naviagtion from "./routes/routes";
+import NavBar from "./component/Navbar";
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Button outline color="success" className="myButton">
-          Hello
-        </Button>
-      </div>
+      <>
+        <NavBar />
+        <Naviagtion />
+      </>
     );
   }
 }
