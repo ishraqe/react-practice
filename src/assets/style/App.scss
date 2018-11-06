@@ -2,17 +2,60 @@
 
 #nav {
   padding: 1em 3em;
-  .main-nav-items {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-basis: 100%;
-    .add-button {
-      justify-self: flex-end;
+  position: fixed;
+  width: 100%;
+  .brand-container, .nav-button-container{
+    width: 50%;
+    display: inline-block;
+  }
+  .brand-container {
+    .logo {
+      text-transform: uppercase;
+      font-size: 1.3em;
+      border-radius: 50%;
+      border: 1px solid #777070;
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      font-family: 'Archivo Narrow', sans-serif;
+      text-align: center;
+    }
+    .brand-text {
+      margin-left: 1em;
+    }
+  }
+  .nav-button-container{
+    text-align: right;
+    .menu-toggle {
+      border: none;
+      padding: 2px 8px;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+        border: none;
+      }
+      .toggle-icon {
+        color: #777070;
+        font-size: 1.3em;
+      }
     }
   }
 }
-  .myButton {
-    text-transform: uppercase;
+#info {
+  height: 80vh;
+  background: url('../img/bg.jpg') no-repeat;
+  background-size: cover;
+  .container-fixed {
+    display: table;
+    height: 500px;
+    width: 100%;
+    .info-container {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
   }
+}
+
+
 
