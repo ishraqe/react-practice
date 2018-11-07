@@ -93,6 +93,7 @@
         margin: 0 10px 4em;
         height: 350px;
         border-top: 1px solid #eee; 
+        padding-top: 22px;
       }
       .horizontal-item {
         .img-container{
@@ -125,6 +126,7 @@
         }
       }
       .full-item {
+        background-color: #FAFAFA;
         .img-container {
           width: 100%;
           height: 350px;
@@ -139,18 +141,59 @@
         
       }
       .info-container { 
-        .sub-title {
+        .sub-title,  .main-title {
           text-transform: uppercase;
-          font-family: inherit;
+          font-family: 'Archivo Narrow';
         }
-        .main-title {}
+        .sub-title {
+          font-size: 1.2em;
+        }
+        .main-title {
+          font-size: 2em;
+          border-bottom: 2px solid #eee;
+          padding-bottom: 1em;
+          margin-bottom: 1em;
+        }
         .info-para {
           text-align: justify;
+          color: #595959;
         }
       }
     }
     .small-container  {
       width : 23%;
+    }
+  }
+}
+#insight {
+  .insight-container {
+    .row {
+      margin-top: 2em;
+      margin-bottom: 5em;
+      .img-container {
+        width: 100%;
+        .insight-cover {
+          width: 100%;
+        }
+      }
+      .insight-title {
+        text-align: center;
+        font-family: 'Archivo Narrow', sans-serif;
+        margin: 2em auto 1em;
+        font-size: 1.3em;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: block;
+        width: 100%;
+      }
+      .insight-paragraph {
+        display: block;
+        text-align: justify;
+        color: #595959;
+        letter-spacing: 2px;
+        margin: 0 auto;
+        width: 65%;
+      }
     }
   }
 }
