@@ -8,22 +8,6 @@
     width: 50%;
     display: inline-block;
   }
-  .brand-container {
-    .logo {
-      text-transform: uppercase;
-      font-size: 1.3em;
-      border-radius: 50%;
-      border: 2px solid #000;
-      display: inline-block;
-      width: 28px;
-      height: 28px;
-      font-family: 'Archivo Narrow', sans-serif;
-      text-align: center;
-    }
-    .brand-text {
-      margin-left: 1em;
-    }
-  }
   .nav-button-container{
     text-align: right;
     .menu-toggle {
@@ -85,84 +69,7 @@
     display: table;
     margin: 0 auto;
     width: 100%;
-    .items {
-      display: table-cell;
-      width: 35%;
-      vertical-align: top;
-      .item {
-        margin: 0 10px 4em;
-        height: 350px;
-        border-top: 1px solid #eee; 
-        padding-top: 22px;
-      }
-      .horizontal-item {
-        .img-container{
-          width: 45%;
-          display: inline-block;
-          vertical-align: top;
-          .news-image {
-            width: 100%;
-            height: 350px;
-          }
-        }
-        .info-container {
-          width: 50%;
-          height: 100%;
-          display: inline-block;
-          margin-left: .8em;
-          padding-left: 1em;
-          border-left: 1px solid #eee; 
-          
-        }
-      }
-      .vertical-item {
-        .img-container {
-          width: 100%;
-          .news-image {
-            width: 100%;
-            height: 150px;
-            margin-bottom: 1em;
-          }
-        }
-      }
-      .full-item {
-        background-color: #FAFAFA;
-        .img-container {
-          width: 100%;
-          height: 350px;
-          .news-image {
-            width: 100%;
-            height: 100%;
-          }
-        }
-        .info-container {
-          margin-top: 2rem;
-        }
-        
-      }
-      .info-container { 
-        .sub-title,  .main-title {
-          text-transform: uppercase;
-          font-family: 'Archivo Narrow';
-        }
-        .sub-title {
-          font-size: 1.2em;
-        }
-        .main-title {
-          font-size: 2em;
-          border-bottom: 2px solid #eee;
-          padding-bottom: 1em;
-          margin-bottom: 1em;
-        }
-        .info-para {
-          text-align: justify;
-          color: #595959;
-        }
-      }
-    }
-    .small-container  {
-      width : 23%;
-    }
+    
   }
 }
 #insight {
@@ -197,6 +104,44 @@
     }
   }
 }
+#tileImage {
+  #columns {
+    column-width: 300px;
+  }
+}
 
+#footer {
+  background: rgb(248, 243, 243);
+  .footer-container {
+    display: table;
+    width: 100%;
+    padding: 1em 0;
+    .brand-container {
+      display: table-cell;
+      width: 50%;
+      vertical-align: middle;
+    }
+    .nav-button-container {
+      display: table-cell;
+      width: 50%;
+      vertical-align: middle;
+      text-align: right;
+      ul {
+        margin: 0;
+      }
+      ul li {
+        display: inline-block;
+        margin: 0 1em;
+        a {
+          color: #000;
+          &:hover {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+  
+}
 
 
