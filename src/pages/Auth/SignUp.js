@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowAltLeft } from "@fortawesome/free-solid-svg-icons";
-
-class Login extends Component {
+import { faFacebookF, faGooglePlusG } from "@fortawesome/free-brands-svg-icons";
+class SignUp extends Component {
   render() {
     return (
-      <div id="Login" className="Auth">
+      <div id="SignUp" className="Auth">
         <div className="container">
           <div className="wrapper">
             <div className="container-fixed">
@@ -27,16 +27,24 @@ class Login extends Component {
                     <label class="label">Password </label>
                     <input className="input" type="text" placeholder="" />
                   </div>
+                  <div className="input-container">
+                    <label class="label">Confirm Password </label>
+                    <input className="input" type="text" placeholder="" />
+                  </div>
                   <div className="input-container submit-remember">
-                    <div class="check-box-container">
-                      <input type="checkbox" />
-                      <span class="checkmark">Remember Me</span>
-                    </div>
-                    <button className="submit-button">Log In</button>
+                    <button className="submit-button">Sign Up</button>
+                  </div>
+                  <div className="input-container social-login">
+                    <button className="submit-button facebook">
+                      <FontAwesomeIcon icon={faFacebookF} />
+                    </button>
+                    <button className="submit-button google">
+                      <FontAwesomeIcon icon={faGooglePlusG} />
+                    </button>
                   </div>
                 </form>
                 <div className="forget-pass-container">
-                  <a> Lost your password?</a>
+                  <a> Already Signed Up?</a>
                   <a>
                     {" "}
                     <FontAwesomeIcon icon={faLongArrowAltLeft} /> Back to
@@ -52,4 +60,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default SignUp;

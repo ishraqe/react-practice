@@ -24,6 +24,7 @@
           font-family: 'Archivo Narrow';
           font-size: 1.5em;
           cursor: pointer;
+          color: #fff;
           &:hover, &:focus {
             padding-bottom :10px;
             border-bottom: 1px solid #fff;
@@ -223,98 +224,50 @@
 
 
 // Login 
-
-#login {
-  
+#Login {
   .form-container {
-    text-align: center;
+    overflow: hidden !important;
+  }
+}
+
+#SignUp {
+  .submit-button {
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    .brand-container, .login-form , .forget-pass-container {
-      margin: 2em 0;
+    padding: .7em;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    cursor: pointer;
+    
+  }
+  .social-login{
+    display: flex;
+    justify-content: space-between;
+    .submit-button {
+      background: #fff;
+      box-shadow: none;
+      border: 1px solid #000;
+      color: #000;
+      width: 48%;
+      transition: .3s;
     }
-    .brand-container {
-      display: table;
-      width: 100%;
-      margin-top: 5em;
-      .logo-container {
-        text-align: right;
-        display: table-cell;
-        vertical-align: middle;
-        width: 40%;
-          .logo {
-            font-size: 3em;
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-            border: 2px solid #000;
-            line-height: 1.2em;
-            margin-left: 1em;
-            cursor: pointer;
-          } 
-        }
-        .brand-text {
-          padding-left: 2em;
-          font-size: 1.3em;
-          display: table-cell;
-          vertical-align: middle;
-          width: 60%;
-          text-align: left;
-        } 
+    .facebook:hover {
+      background: #3B5998;
+      border-color: #3B5998;
+      color: #fff;
     }
-    .login-form {
-      text-align: center;
-      .input-container {
-        width: 40%;
-        text-align: center;
-        margin: 1em auto;
-        .label, .input  {
-          display: block;
-          width: 100%;
-          text-align: left;
-        }
-        .label {
-          margin: .8em 0;
-          font-size: 1.2em;
-          font-weight: 600;
-        }
-        .input {
-          padding: .7em 0;
-          color: #000;
-          padding-left: 1em;
-        }        
-      }
-      .submit-remember {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-        .submit-container {
-          display: inline-block;
-        }
-        .checkmark {
-          font-size: 1.2em;
-          font-weight: 600;
-          margin-left: 10px;
-         }  
-        .submit-button {
-          padding: .3em 1em;
-          background: #000;
-          color: #fff;
-          border-radius: 4px;
-          cursor: pointer;
-        }
-      }
-    }
-    .forget-pass-container {
-      a {
-        display: block;
-        margin: 1em 0;
-        font-size: 1.2em;
-      }
+    .google:hover {
+      background: #DB4437;
+      border-color: #DB4437;
+      color: #fff;
     }
   }
 }
+#ForgotPassword {
+  .submit-button {
+    width: 100%;
+    padding: .7em;
+  }
+}
+
 
 

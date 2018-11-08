@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowAltLeft } from "@fortawesome/free-solid-svg-icons";
 
-class Login extends Component {
+class ForgotPassword extends Component {
   render() {
     return (
-      <div id="Login" className="Auth">
+      <div id="ForgotPassword" className="Auth">
         <div className="container">
           <div className="wrapper">
             <div className="container-fixed">
@@ -18,25 +18,17 @@ class Login extends Component {
                     A photograpic journal _23 photos
                   </span>
                 </div>
+
                 <form className="login-form">
                   <div className="input-container">
-                    <label class="label">E-mail/ Username</label>
-                    <input className="input" type="text" placeholder="" />
-                  </div>
-                  <div className="input-container">
-                    <label class="label">Password </label>
+                    <label class="label">Enter Recovery E-mail</label>
                     <input className="input" type="text" placeholder="" />
                   </div>
                   <div className="input-container submit-remember">
-                    <div class="check-box-container">
-                      <input type="checkbox" />
-                      <span class="checkmark">Remember Me</span>
-                    </div>
-                    <button className="submit-button">Log In</button>
+                    <button className="submit-button">Submit</button>
                   </div>
                 </form>
                 <div className="forget-pass-container">
-                  <a> Lost your password?</a>
                   <a>
                     {" "}
                     <FontAwesomeIcon icon={faLongArrowAltLeft} /> Back to
@@ -52,4 +44,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default ForgotPassword;
