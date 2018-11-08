@@ -1,12 +1,18 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
+import { closeMenu } from "../store/actions/index";
+
 class Navbar extends Component {
-  state = {
-    className: "",
-    toggleMenu: false
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      className: ""
+    };
+    this.closeModal = this.closeModal.bind(this);
+  }
   navScrollBackground = () => {
     window.onscroll = () => {
       const newScrollHeight = Math.ceil(window.scrollY / 50) * 50;
@@ -21,13 +27,15 @@ class Navbar extends Component {
       });
     };
   };
-  toggleMenuAction = () => {
-    console.log("ok");
-  };
+  closeModal() {
+    this.props.closeMenuModal();
+  }
   componentDidMount() {
     this.navScrollBackground();
   }
+
   render() {
+    console.log(this.props);
     return (
       <nav id="nav" className={this.state.className}>
         <div className="container">
@@ -40,7 +48,7 @@ class Navbar extends Component {
                 </span>
               </div>
               <div className="nav-button-container">
-                <button className="menu-toggle">
+                <button onClick={this.closeModal} className="menu-toggle">
                   <FontAwesomeIcon className="toggle-icon" icon={faBars} />
                 </button>
               </div>
@@ -51,5 +59,13 @@ class Navbar extends Component {
     );
   }
 }
+const mapDispatchToProps = dispatch => {
+  return {
+    closeMenuModal: () => dispatch(closeMenu())
+  };
+};
 
-export default Navbar;
+export default connect(
+  null,
+  mapDispatchToProps
+)(Navbar);
