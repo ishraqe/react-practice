@@ -7,8 +7,8 @@ export function* check(action) {
   });
 }
 
-export function* closeNavToggleMenu(action) {
-  yield put({
-    type: CLOSE_TOGGLE_MENU
-  });
-}
+// export function* closeNavToggleMenu(action) {
+//   yield put({
+//     type: CLOSE_TOGGLE_MENU
+//   });
+// }

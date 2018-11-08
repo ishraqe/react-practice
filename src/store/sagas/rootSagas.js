@@ -1,5 +1,5 @@
-import { check, closeNavToggleMenu } from "./blogSagas";
+import { check } from "./blogSagas";
 
 export default function* rootSaga() {
-  yield [check(), closeNavToggleMenu()];
+  yield [check()];
 }
