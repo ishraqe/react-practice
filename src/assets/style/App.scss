@@ -8,6 +8,7 @@
   left: 0;
   bottom: 0;
   overflow: hidden;
+  z-index: 99999;
   .menu-container {
     display: table;
     width: 100%;
@@ -157,12 +158,33 @@
 }
 #tileImage {
   #columns {
-    column-width: 300px;
+    column-width: 350px;
+  }
+  .read-more {
+    margin: 0 auto;
+    text-align: center;
+    padding: 1em 4em;
+    background: transparent;
+    color: #000;
+    border: 2px solid #000;
+    text-transform: uppercase;
+    font-family: 'Archivo Narrow';
+    font-weight: 600;
+    font-size: 1em;
+    display: block;
+    margin-bottom: 3em;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    &:hover, &:focus {
+      background: #000;
+      color: #fff;
+      border-color: #000;
+    }
   }
 }
 
 #footer {
-  background: rgb(248, 243, 243);
+  background:#f9f7f7;
   .footer-container {
     display: table;
     width: 100%;

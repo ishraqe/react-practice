@@ -105,57 +105,6 @@ class Home extends Component {
             </div>
           </div>
         </section>
-        <section id="tileImage">
-          <div className="container">
-            <div className="wrapper">
-              <div className="container-fixed">
-                <div className="tileImage-container">
-                  <div id="columns">
-                    <figure>
-                      <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ariel.jpg" />
-                    </figure>
-
-                    <figure>
-                      <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/rapunzel.jpg" />
-                    </figure>
-
-                    <figure>
-                      <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/belle.jpg" />
-                    </figure>
-
-                    <figure>
-                      <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/mulan_2.jpg" />
-                    </figure>
-
-                    <figure>
-                      <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/sleeping-beauty.jpg" />
-                    </figure>
-
-                    <figure>
-                      <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/pocahontas_2.jpg" />
-                    </figure>
-
-                    <figure>
-                      <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/snow-white.jpg" />
-                    </figure>
-
-                    <figure>
-                      <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ariel.jpg" />
-                    </figure>
-
-                    <figure>
-                      <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/tiana.jpg" />
-                    </figure>
-                    <small>
-                      Art &copy; <a href="//clairehummel.com">Claire Hummel</a>
-                    </small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section id="insight">
           <div className="container">
             <div className="wrapper">
@@ -208,6 +157,59 @@ class Home extends Component {
             </div>
           </div>
         </section>
+
+        <section id="tileImage">
+          <div className="container">
+            <div className="wrapper">
+              <div className="container-fixed">
+                <div className="tileImage-container">
+                  <div id="columns">
+                    <figure>
+                      <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ariel.jpg" />
+                    </figure>
+
+                    <figure>
+                      <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/rapunzel.jpg" />
+                    </figure>
+
+                    <figure>
+                      <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/belle.jpg" />
+                    </figure>
+
+                    <figure>
+                      <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/mulan_2.jpg" />
+                    </figure>
+
+                    <figure>
+                      <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/sleeping-beauty.jpg" />
+                    </figure>
+
+                    <figure>
+                      <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/pocahontas_2.jpg" />
+                    </figure>
+
+                    <figure>
+                      <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/snow-white.jpg" />
+                    </figure>
+
+                    <figure>
+                      <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ariel.jpg" />
+                    </figure>
+
+                    <figure>
+                      <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/tiana.jpg" />
+                    </figure>
+                    <small>
+                      Art &copy; <a href="//clairehummel.com">Claire Hummel</a>
+                    </small>
+                  </div>
+                  <button className="read-more">Continue Journey</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <Footer />
       </>
     );

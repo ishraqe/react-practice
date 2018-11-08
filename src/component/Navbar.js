@@ -35,7 +35,6 @@ class Navbar extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <nav id="nav" className={this.state.className}>
         <div className="container">

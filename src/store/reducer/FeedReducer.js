@@ -6,8 +6,7 @@ const INITIAL_STATE = {
 export default (state = INITIAL_STATE, actions) => {
   switch (actions.type) {
     case CLOSE_TOGGLE_MENU:
-      console.log(actions);
-      return { ...state, check: !state.toggleMenu };
+      return { ...state, toggleMenu: !state.toggleMenu };
     default:
       return state;
   }
