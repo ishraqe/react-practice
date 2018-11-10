@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./assets/style/App.scss";
 import { connect } from "react-redux";
+import * as firebase from "firebase";
+
 import Naviagtion from "./routes/routes";
 import MenuToggle from "./component/MenuToggle";
 import { closeMenu } from "./store/actions/index";
@@ -13,9 +15,17 @@ class App extends Component {
     };
     this.toggleMenuModal = this.toggleMenuModal.bind(this);
   }
-  componentDidMount() {}
+  componentDidMount() {
+    firebase.initializeApp({
+      apiKey: "AIzaSyD92RCqlVFZPatJsqYNCBVZwGlfrjyleNc",
+      authDomain: "memories-91351.firebaseapp.com",
+      databaseURL: "https://memories-91351.firebaseio.com",
+      projectId: "memories-91351",
+      storageBucket: "memories-91351.appspot.com",
+      messagingSenderId: "865582910408"
+    });
+  }
   static getDerivedStateFromProps(nextProps, prevState) {
-    console.log(nextProps, "static");
     if (nextProps.toggleMenu !== prevState.menuModal) {
       return {
         menuModal: nextProps.toggleMenu

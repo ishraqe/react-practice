@@ -36,7 +36,12 @@ class Navbar extends Component {
 
   render() {
     return (
-      <nav id="nav" className={this.state.className}>
+      <nav
+        id="nav"
+        className={
+          this.state.className + this.props.bgClass ? this.props.bgClass : ""
+        }
+      >
         <div className="container">
           <div className="wrapper">
             <div className="container-fixed">

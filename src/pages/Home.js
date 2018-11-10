@@ -24,6 +24,7 @@ class Home extends Component {
             </div>
           </div>
         </section>
+
         <section id="news">
           <div className="container">
             <div className="wrapper">

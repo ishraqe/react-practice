@@ -1,8 +1,8 @@
 @import "./common";
-// menu modal 
+// menu modal
 .menu-toogle-container {
   position: absolute;
-  background: rgba(0, 0, 0,1);
+  background: rgba(0, 0, 0, 0.7);
   width: 100%;
   top: 0;
   left: 0;
@@ -21,12 +21,13 @@
       .list {
         margin: 1em 0;
         .buttons {
-          font-family: 'Archivo Narrow';
+          font-family: medium-content-serif-font, serif;
           font-size: 1.5em;
           cursor: pointer;
           color: #fff;
-          &:hover, &:focus {
-            padding-bottom :10px;
+          &:hover,
+          &:focus {
+            padding-bottom: 10px;
             border-bottom: 1px solid #fff;
           }
         }
@@ -39,7 +40,8 @@
       right: 4em;
       cursor: pointer;
       border: none;
-      &:focus, &:hover {
+      &:focus,
+      &:hover {
         border: none;
         outline: none;
       }
@@ -49,7 +51,6 @@
       }
     }
   }
-  
 }
 
 // Nav and footer
@@ -58,11 +59,13 @@
   position: fixed;
   width: 100%;
   position: fixed;
-  .brand-container, .nav-button-container{
+  top: 0;
+  .brand-container,
+  .nav-button-container {
     width: 50%;
     display: inline-block;
   }
-  .nav-button-container{
+  .nav-button-container {
     text-align: right;
     .menu-toggle {
       border: none;
@@ -81,8 +84,9 @@
   }
 }
 
+// global footer
 #footer {
-  background:#f9f7f7;
+  background: #f9f7f7;
   .footer-container {
     display: table;
     width: 100%;
@@ -112,13 +116,12 @@
       }
     }
   }
-  
 }
 
 // Home Page
 #info {
   height: 80vh;
-  background: url('../img/bg.jpg') no-repeat;
+  background: url("../img/bg.jpg") no-repeat;
   background-size: cover;
   .container-fixed {
     display: table;
@@ -128,8 +131,10 @@
       display: table-cell;
       vertical-align: middle;
       text-align: center;
-      h5, h1, p {
-        font-family: 'Archivo Narrow', sans-serif;
+      h5,
+      h1,
+      p {
+        font-family: medium-content-serif-font, serif;
         color: #000;
       }
       h5 {
@@ -160,7 +165,6 @@
     display: table;
     margin: 0 auto;
     width: 100%;
-    
   }
 }
 #insight {
@@ -176,7 +180,8 @@
       }
       .insight-title {
         text-align: center;
-        font-family: 'Archivo Narrow', sans-serif;
+        font-family: medium-content-serif-font, serif;
+
         margin: 2em auto 1em;
         font-size: 1.3em;
         font-weight: bold;
@@ -207,14 +212,16 @@
     color: #000;
     border: 2px solid #000;
     text-transform: uppercase;
-    font-family: 'Archivo Narrow';
+    font-family: medium-content-serif-font, serif;
+
     font-weight: 600;
     font-size: 1em;
     display: block;
     margin-bottom: 3em;
     letter-spacing: 1px;
     transition: 0.3s;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background: #000;
       color: #fff;
       border-color: #000;
@@ -222,8 +229,7 @@
   }
 }
 
-
-// Login 
+// Login
 #Login {
   .form-container {
     overflow: hidden !important;
@@ -233,13 +239,12 @@
 #SignUp {
   .submit-button {
     width: 100%;
-    padding: .7em;
+    padding: 0.7em;
     font-size: 1.2em;
     letter-spacing: 1px;
     cursor: pointer;
-    
   }
-  .social-login{
+  .social-login {
     display: flex;
     justify-content: space-between;
     .submit-button {
@@ -248,16 +253,16 @@
       border: 1px solid #000;
       color: #000;
       width: 48%;
-      transition: .3s;
+      transition: 0.3s;
     }
     .facebook:hover {
-      background: #3B5998;
-      border-color: #3B5998;
+      background: #3b5998;
+      border-color: #3b5998;
       color: #fff;
     }
     .google:hover {
-      background: #DB4437;
-      border-color: #DB4437;
+      background: #db4437;
+      border-color: #db4437;
       color: #fff;
     }
   }
@@ -265,9 +270,38 @@
 #ForgotPassword {
   .submit-button {
     width: 100%;
-    padding: .7em;
+    padding: 0.7em;
   }
 }
 
+// Error page
 
-
+#errorContainer {
+  height: 83vh;
+  .error-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 50%;
+    background: #fff;
+    text-align: center;
+    box-shadow: 1px 1px 1px 2px #ddd;
+    padding: 1.2em;
+    .heading {
+      font-size: 7em;
+      margin: 0;
+    }
+    .heading-explan {
+      margin-bottom: 3em;
+    }
+    .sub-heading {
+      margin-bottom: 0.4em;
+      font-size: 2.3rem;
+    }
+    .paragrapg {
+      margin: 3em;
+    }
+  }
+}
