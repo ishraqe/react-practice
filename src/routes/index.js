@@ -1,3 +1,6 @@
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
 //Auth
 import Error from "../pages/404";
 import Login from "../pages/Auth/Login";
@@ -8,36 +11,33 @@ import Home from "../pages/Home";
 import MemoryDetail from "../pages/MemoryDetail";
 
 //
-import Dashboard from "../layout/DashboardLayout";
+import DashboardLayout from "../layout/DashboardLayout";
+import Dashboard from "../pages/DashboardPages/Dashboard";
+import Create from "../pages/DashboardPages/Create";
 
-const routes = [
-  {
-    path: "/",
-    component: Home
-  },
-  {
-    path: "/login",
-    component: Login
-  },
-  {
-    path: "/SignUp",
-    component: SignUp
-  },
-  {
-    path: "/password-recovery",
-    component: ForgotPassword
-  },
-  {
-    path: "/memory-detail/:slug",
-    component: MemoryDetail
-  },
-  {
-    path: "/dashboard",
-    component: Dashboard
-  },
-  {
-    path: "*",
-    component: Error
-  } /* And so on. */
-];
-export default routes;
+const Routes = props => {
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/login" component={Login} />
+        <Route path="/SignUp" component={SignUp} />
+        <Route path="/password-recovery" component={ForgotPassword} />
+        <Route path="/memory-detail/:slug" component={MemoryDetail} />
+        <Route
+          path="/dashboard"
+          render={({ match: { url } }) => (
+            <DashboardLayout>
+              <Route exact path={`${url}/`} component={Dashboard} />
+              <Route path={`${url}/create`} component={Create} />
+            </DashboardLayout>
+          )}
+        />
+
+        <Route path="*" component={Error} />
+      </Switch>
+    </BrowserRouter>
+  );
+};
+
+export default Routes;

@@ -3,7 +3,6 @@ import "./assets/style/App.scss";
 import { connect } from "react-redux";
 // import * as firebase from "firebase";
 
-import { BrowserRouter, Switch, Route } from "react-router-dom";
 import RootRoutes from "./routes/index";
 import MenuToggle from "./component/MenuToggle";
 import { closeMenu } from "./store/actions/index";
@@ -38,14 +37,9 @@ class App extends Component {
     this.props.closeMenuModal();
   }
   render() {
-    const routeComponents = RootRoutes.map(({ path, component }, key) => (
-      <Route exact path={path} component={component} key={key} />
-    ));
     return (
       <div className="main-body">
-        <BrowserRouter>
-          <Switch>{routeComponents}</Switch>
-        </BrowserRouter>
+        <RootRoutes />
         {this.state.menuModal ? (
           <MenuToggle toggleMenuModal={() => this.toggleMenuModal()} />
         ) : (
