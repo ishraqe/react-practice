@@ -14,18 +14,25 @@ class Navbar extends Component {
     this.closeModal = this.closeModal.bind(this);
   }
   navScrollBackground = () => {
-    window.onscroll = () => {
-      const newScrollHeight = Math.ceil(window.scrollY / 50) * 50;
-      let addClassName = "";
-      if (newScrollHeight > 100) {
-        addClassName += "nav-background";
-      } else if (newScrollHeight < 100) {
-        addClassName = "";
-      }
+    if (this.props.bgClass) {
       this.setState({
-        className: addClassName
+        className: this.props.bgClass
       });
-    };
+    } else {
+      console.log("ll", this.props.bgClass);
+      window.onscroll = () => {
+        const newScrollHeight = Math.ceil(window.scrollY / 50) * 50;
+        let addClassName = "";
+        if (newScrollHeight > 100) {
+          addClassName += "nav-background";
+        } else if (newScrollHeight < 100) {
+          addClassName = "";
+        }
+        this.setState({
+          className: addClassName
+        });
+      };
+    }
   };
   closeModal() {
     this.props.closeMenuModal();
@@ -38,9 +45,7 @@ class Navbar extends Component {
     return (
       <nav
         id="nav"
-        className={
-          this.state.className + this.props.bgClass ? this.props.bgClass : ""
-        }
+        className={this.state.className ? this.state.className : ""}
       >
         <div className="container">
           <div className="wrapper">

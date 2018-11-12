@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import "./assets/style/App.scss";
 import { connect } from "react-redux";
-import * as firebase from "firebase";
+// import * as firebase from "firebase";
 
-import Naviagtion from "./routes/routes";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import RootRoutes from "./routes/index";
 import MenuToggle from "./component/MenuToggle";
 import { closeMenu } from "./store/actions/index";
 
@@ -16,14 +17,14 @@ class App extends Component {
     this.toggleMenuModal = this.toggleMenuModal.bind(this);
   }
   componentDidMount() {
-    firebase.initializeApp({
-      apiKey: "AIzaSyD92RCqlVFZPatJsqYNCBVZwGlfrjyleNc",
-      authDomain: "memories-91351.firebaseapp.com",
-      databaseURL: "https://memories-91351.firebaseio.com",
-      projectId: "memories-91351",
-      storageBucket: "memories-91351.appspot.com",
-      messagingSenderId: "865582910408"
-    });
+    // firebase.initializeApp({
+    //   apiKey: "AIzaSyD92RCqlVFZPatJsqYNCBVZwGlfrjyleNc",
+    //   authDomain: "memories-91351.firebaseapp.com",
+    //   databaseURL: "https://memories-91351.firebaseio.com",
+    //   projectId: "memories-91351",
+    //   storageBucket: "memories-91351.appspot.com",
+    //   messagingSenderId: "865582910408"
+    // });
   }
   static getDerivedStateFromProps(nextProps, prevState) {
     if (nextProps.toggleMenu !== prevState.menuModal) {
@@ -37,9 +38,14 @@ class App extends Component {
     this.props.closeMenuModal();
   }
   render() {
+    const routeComponents = RootRoutes.map(({ path, component }, key) => (
+      <Route exact path={path} component={component} key={key} />
+    ));
     return (
       <div className="main-body">
-        <Naviagtion />
+        <BrowserRouter>
+          <Switch>{routeComponents}</Switch>
+        </BrowserRouter>
         {this.state.menuModal ? (
           <MenuToggle toggleMenuModal={() => this.toggleMenuModal()} />
         ) : (
