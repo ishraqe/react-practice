@@ -44,6 +44,10 @@ li a {
 }
 a {
   cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 }
 .main-body {
   position: relative;

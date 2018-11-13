@@ -1,13 +1,17 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+
 const MenuToggle = props => {
   return (
     <div className="menu-toogle-container">
       <div className="menu-container">
         <ul className="lists">
           <li className="list">
-            <a className="buttons">Login</a>
+            <Link to="/login" className="buttons">
+              Login
+            </Link>
           </li>
           <li className="list">
             <a className="buttons">Feed</a>
@@ -16,7 +20,13 @@ const MenuToggle = props => {
             <a className="buttons">About</a>
           </li>
           <li className="list">
-            <a className="buttons">Contact</a>
+            <Link
+              to="/contact"
+              onClick={props.toggleMenuModal}
+              className="buttons"
+            >
+              Contact
+            </Link>
           </li>
         </ul>
         <button className="closeToggle" onClick={props.toggleMenuModal}>
