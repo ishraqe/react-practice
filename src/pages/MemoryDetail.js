@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Nav from "../component/Navbar";
 import Footer from "../component/Footer";
+import Comment from "../component/Comment";
+
 class MemoryDetail extends Component {
   render() {
     console.log("detail page");
@@ -52,11 +54,11 @@ class MemoryDetail extends Component {
             </div>
           </div>
         </section>
-        <section id="comment" className="padding-2">
+        <section id="response-container" className="padding-2">
           <div className="container">
             <div className="wrapper">
               <div className="container-fixed">
-                <div className="comment-container">comment</div>
+                <Comment />
               </div>
             </div>
           </div>
