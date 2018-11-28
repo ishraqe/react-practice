@@ -16,6 +16,7 @@ import DashboardLayout from "../layout/DashboardLayout";
 import Dashboard from "../pages/DashboardPages/Dashboard";
 import Create from "../pages/DashboardPages/Create";
 
+import history from "./history";
 const Routes = props => {
   return (
     <BrowserRouter>
@@ -26,7 +27,7 @@ const Routes = props => {
         className="switch-wrapper"
       >
         <Route exact path="/" component={Home} />
-        <Route exact path="/login" component={Login} />
+        <Route path="/login" component={Login} />
         <Route path="/SignUp" component={SignUp} />
         <Route path="/password-recovery" component={ForgotPassword} />
         <Route path="/contact" component={Contact} />

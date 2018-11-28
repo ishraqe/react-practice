@@ -1,7 +1,18 @@
 import React, { Component } from "react";
 import Nav from "../component/Navbar";
 import Footer from "../component/Footer";
+import { chckRouter } from "../store/actions/index";
+import { connect } from "react-redux";
+
 class Home extends Component {
+  componentDidMount() {
+    const auth = this.props.checkforRoutes();
+    if (auth.isAuth) {
+      setTimeout(() => {
+        this.props.history.push("/login");
+      }, 500);
+    }
+  }
   render() {
     return (
       <>
@@ -217,4 +228,13 @@ class Home extends Component {
   }
 }
 
-export default Home;
+const mapsDispatchToProps = dispatch => {
+  return {
+    checkforRoutes: () => dispatch(chckRouter())
+  };
+};
+
+export default connect(
+  null,
+  mapsDispatchToProps
+)(Home);
